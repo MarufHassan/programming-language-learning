@@ -1,6 +1,6 @@
 # [Hello World][title]
 
-[Problem statement](/../../../hello-world/hello-world.pdf)
+[Problem statement](/../../tree/master/src/hello-world/hello-world.pdf)
 
 ## Solution
 
