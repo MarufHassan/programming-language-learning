@@ -1,6 +1,6 @@
 # [Stdin and Stdout I][title]
 
-[Problem statement](/stdin-and-stdout-1/stdin-and-stdout-1.pdf)
+[Problem statement](/../../../stdin-and-stdout-1/stdin-and-stdout-1.pdf)
 
 ## Solution
 
