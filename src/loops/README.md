@@ -1,6 +1,6 @@
-# [Java Loops I][title]
+# [Loops II][title]
 
-[Problem statement](/../../tree/master/src/loops-i/loops-i/loops-i.pdf)
+[Problem statement](/../../tree/master/src/loops/loops/loops.pdf)
 
 ## Solution
 
@@ -9,15 +9,25 @@
 ```java
 import java.util.Scanner;
 
-public class Solution {
-    private static final Scanner scanner = new Scanner(System.in);
-    public static void main(String[] args) {
-        int N = scanner.nextInt();
-        for (int i = 1; i <= 10; i++) {
-            System.out.printf("%d x %d = %d\n", N, i, N * i);
-        }
+public class Solution{
+    public static void main(String []argh){
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
 
-        scanner.close();
+        for(int i = 0; i < t; i++){
+            int a = in.nextInt();
+            int b = in.nextInt();
+            int n = in.nextInt();
+
+            int sum = a, powerOfTwo = 1;
+            for (int j = 0; j < n; j++) {
+                sum += (powerOfTwo * b);
+                System.out.printf("%d ", sum);
+                powerOfTwo *= 2;
+            }
+            System.out.println();
+        }
+        in.close();
     }
 }
 ```
@@ -29,9 +39,22 @@ using System;
 
 class Solution {
     public static void Main(string[] args) {
-        int N = Console.Read() - '0';
-        for (int i = 1; i <= 10; i++) {
-            Console.WriteLine(String.Format("{0} x {1} = {2}", N, i, N * i));
+        int t = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i < t; i++) {
+            String line = Console.ReadLine();
+            String[] tokens = line.Split(' ');
+            int a = int.Parse(tokens[0]);
+            int b = int.Parse(tokens[1]);
+            int n = int.Parse(tokens[2]);
+
+            int sum = a, powerOfTwo = 1;
+            for (int j = 0; j < n; j++) {
+                sum += (powerOfTwo * b);
+                Console.Write(sum + " ");
+                powerOfTwo *= 2;
+            }
+            Console.WriteLine();
         }
     }
 }
@@ -44,11 +67,24 @@ Imports System
 
 Module Solution
 	Public Sub Main()
-		Dim N As Integer = Console.Read()
-        N -= 48
-        For i = 1 To 10
-            Console.WriteLine(String.Format("{0} x {1} = {2}", N, i, N * i))
-        Next
+		Dim t As Integer = Integer.Parse(Console.ReadLine())
+
+        For i = 1 To t
+            Dim line As String = Console.ReadLine()
+            Dim tokens As String() = line.Split(" "c)
+            Dim a As Integer = Integer.Parse(tokens(0))
+            Dim b As Integer = Integer.Parse(tokens(1))
+            Dim n As Integer = Integer.Parse(tokens(2))
+
+            Dim sum As Integer = a
+            Dim powerOfTwo As Integer = 1
+            For j = 0 To n - 1
+                sum += (powerOfTwo * b)
+                Console.Write(String.Format("{0} ", sum))
+                powerOfTwo *= 2
+            Next
+            Console.WriteLine()
+        Next 
 	End Sub
 End Module
 ```
@@ -67,4 +103,4 @@ Compile with `csc Solution.cs` and run with `Solution.exe`.
 
 Compile with `vbc Solution.vb` and run with `Solution.exe`.
 
-[title]: https://www.hackerrank.com/challenges/java-loops-i/problem
+[title]: https://www.hackerrank.com/challenges/java-loops/problem
