@@ -21,9 +21,11 @@ Java, C#, Visual Basic
 | [Datatypes][hr001] | Basic | Java, C#, VB |
 | [End-of-file][hr002] | File | Java, C#, VB |
 | [Find Right Interval][lc0436] | Binary Search | Java, C#, VB |
+| [Implement Rand10() Using Rand7()][lc0470] | Random | Java, C#, VB |
 
 
 [lc0436]: /src/436-find-right-interval
+[lc0470]: /src/470-implement-rand10-using-rand7
 
 [hr001]: /src/datatypes
 [hr002]: /src/end-of-file
