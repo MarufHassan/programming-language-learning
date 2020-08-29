@@ -10,7 +10,7 @@ Java, C#, Visual Basic
 ## List of problems
 
 | Title                                    | Tag | Language                                      |
-| :--------------------------------------- | :--------------------------------------- |
+| :--------------------------------------- | :-- |:--------------------------------------- |
 | [Hello World][hr003] | Basic | Java, C#, VB |
 | [Stdin and Stdout I][hr008] | Basic | Java, C#, VB |
 | [If-Else][hr004] | Basic | Java, C#, VB |
