@@ -22,7 +22,7 @@ Java, C#, Visual Basic
 | [End-of-file][hr002] | File | Java, C#, VB |
 | [Find Right Interval][lc0436] | Binary Search | Java, C#, VB |
 | [Implement Rand10() Using Rand7()][lc0470] | Random | Java, C#, VB |
-| [Pancake Sorting][lc0470] | Array, Sort | Java, C#, VB |
+| [Pancake Sorting][lc0969] | Array, Sort | Java, C#, VB |
 
 
 [lc0436]: /src/436-find-right-interval
