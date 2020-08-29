@@ -9,6 +9,8 @@ Java, C#, Visual Basic
 
 ## List of problems
 
+### Easy
+
 | Title                                    | Tag | Language                                      |
 | :--------------------------------------- | :-- |:--------------------------------------- |
 | [Hello World][hr003] | Basic | Java, C#, VB |
@@ -20,6 +22,11 @@ Java, C#, Visual Basic
 | [Loops II][hr006] | Basic | Java, C#, VB |
 | [Datatypes][hr001] | Basic | Java, C#, VB |
 | [End-of-file][hr002] | File | Java, C#, VB |
+
+### Medium
+
+| Title                                    | Tag | Language                                      |
+| :--------------------------------------- | :-- |:--------------------------------------- |
 | [Find Right Interval][lc0436] | Binary Search | Java, C#, VB |
 | [Implement Rand10() Using Rand7()][lc0470] | Random | Java, C#, VB |
 | [Pancake Sorting][lc0969] | Array, Sort | Java, C#, VB |
