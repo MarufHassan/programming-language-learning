@@ -22,10 +22,12 @@ Java, C#, Visual Basic
 | [End-of-file][hr002] | File | Java, C#, VB |
 | [Find Right Interval][lc0436] | Binary Search | Java, C#, VB |
 | [Implement Rand10() Using Rand7()][lc0470] | Random | Java, C#, VB |
+| [Pancake Sorting][lc0470] | Array, Sort | Java, C#, VB |
 
 
 [lc0436]: /src/436-find-right-interval
 [lc0470]: /src/470-implement-rand10-using-rand7
+[lc0969]: /src/969-pancake-sorting
 
 [hr001]: /src/datatypes
 [hr002]: /src/end-of-file
