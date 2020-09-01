@@ -3,24 +3,36 @@ using System.Collections.Generic;
 using System.IO;
 
 public class Solution {
-    public bool ContainsPattern(int[] arr, int m, int k) {
-        int n = arr.Length;
-        int pattern = m * k;        
-        if (pattern > n) return false;
-        
-        for (int i = 0; i + pattern <= n; i++) {
-            bool ans = true;
-            for (int j = 1; j <= k - 1; j++) {
-                int window = j * m;
-                for (int a = i + window; a < i + window + m; a++) {
-                    if (arr[a] != arr[a - m]) {
-                        ans = false;
-                    }
-                }
+    private int ans;
+
+    public string LargestTimeFromDigits(int[] A) {
+        ans = -1;
+        Permute(A, 0);
+        if (ans < 0) return "";
+        return String.Format("{0:00}:{1:00}", ans / 60, ans % 60);
+    }
+
+    private void Swap(int[] A, int i, int j) {
+        int t = A[i];
+        A[i] = A[j];
+        A[j] = t;
+    }
+
+    private void Permute(int[] A, int index) {
+        if (index >= A.Length) {
+            int h = A[0] * 10 + A[1];
+            int m = A[2] * 10 + A[3];
+            int minutes = h * 60 + m;
+            if (h < 24 && m < 60) {
+                ans = Math.Max(ans, minutes);
             }
-            if (ans) return true;
+            return;
         }
-        return false;
+        for (int start = index; start < A.Length; start++) {
+            Swap(A, start, index);
+            Permute(A, index + 1);
+            Swap(A, start, index);
+        }
     }
 }
 
@@ -36,11 +48,9 @@ public class Driver
         while ((line = inputfile.ReadLine()) != null)
         {
             int[] arr = StringToIntegerArray(line);
-            int m = StringToInteger(inputfile.ReadLine());
-            int k = StringToInteger(inputfile.ReadLine());
             
             String expected = outputfile.ReadLine();
-            String output = BooleanToString(solution.ContainsPattern(arr, m, k));
+            String output = solution.LargestTimeFromDigits(arr);
             CheckAnswer(expected, output, testno++);
         }
     }

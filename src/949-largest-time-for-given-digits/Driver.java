@@ -2,24 +2,40 @@ import java.util.*;
 import java.io.*;
 
 class Solution {
-    public boolean containsPattern(int[] arr, int m, int k) {
-        int n = arr.length;
-        int pattern = m * k;        
-        if (pattern > n) return false;
+    private int ans;
+    
+    public String largestTimeFromDigits(int[] A) {
+        ans = -1;
         
-        for (int i = 0; i + pattern <= n; i++) {
-            boolean ans = true;
-            for (int j = 1; j <= k - 1; j++) {
-                int window = j * m;
-                for (int a = i + window; a < i + window + m; a++) {
-                    if (arr[a] != arr[a - m]) {
-                        ans = false;
-                    }
-                }
+        permute(A, 0);
+        if (ans < 0) return "";
+        
+        return String.format("%02d:%02d", ans / 60, ans % 60);
+    }
+    
+    private void swap(int[] A, int i, int j) {
+        int t = A[i];
+        A[i] = A[j];
+        A[j] = t;
+    }
+    
+    private void permute(int[] A, int index) {
+        if (index >= A.length) {
+            int h = A[0] * 10 + A[1];
+            int m = A[2] * 10 + A[3];
+            int minutes = h * 60 + m;
+            
+            if (h < 24 && m < 60) {
+                ans = Math.max(ans, minutes);
             }
-            if (ans) return true;
+            
+            return;
         }
-        return false;
+        for (int start = index; start < A.length; start++) {
+            swap(A, start, index);
+            permute(A, index + 1);
+            swap(A, start, index);
+        }
     }
 }
 
@@ -33,11 +49,9 @@ public class Driver {
         while (inputfile.hasNextLine()) {
             String line = inputfile.nextLine();
             int[] arr = stringToIntegerArray(line);
-            int m = stringToInteger(inputfile.nextLine());
-            int k = stringToInteger(inputfile.nextLine());
             
             String expected = outputfile.nextLine();
-            String output = booleanToString(solution.containsPattern(arr, m, k));;
+            String output = solution.largestTimeFromDigits(arr);
             checkAnswer(expected, output, testno++);
         }
         

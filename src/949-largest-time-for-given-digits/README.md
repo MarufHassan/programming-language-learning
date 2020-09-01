@@ -1,4 +1,4 @@
-# [1566. Detect Pattern of Length M Repeated K or More Times][title]
+# [949. Largest Time for Given Digits][title]
 
 [Problem statement][title]
 
@@ -8,24 +8,40 @@
 
 ```java
 class Solution {
-    public boolean containsPattern(int[] arr, int m, int k) {
-        int n = arr.length;
-        int pattern = m * k;        
-        if (pattern > n) return false;
+    private int ans;
+    
+    public String largestTimeFromDigits(int[] A) {
+        ans = -1;
         
-        for (int i = 0; i + pattern <= n; i++) {
-            boolean ans = true;
-            for (int j = 1; j <= k - 1; j++) {
-                int window = j * m;
-                for (int a = i + window; a < i + window + m; a++) {
-                    if (arr[a] != arr[a - m]) {
-                        ans = false;
-                    }
-                }
+        permute(A, 0);
+        if (ans < 0) return "";
+        
+        return String.format("%02d:%02d", ans / 60, ans % 60);
+    }
+    
+    private void swap(int[] A, int i, int j) {
+        int t = A[i];
+        A[i] = A[j];
+        A[j] = t;
+    }
+    
+    private void permute(int[] A, int index) {
+        if (index >= A.length) {
+            int h = A[0] * 10 + A[1];
+            int m = A[2] * 10 + A[3];
+            int minutes = h * 60 + m;
+            
+            if (h < 24 && m < 60) {
+                ans = Math.max(ans, minutes);
             }
-            if (ans) return true;
+            
+            return;
         }
-        return false;
+        for (int start = index; start < A.length; start++) {
+            swap(A, start, index);
+            permute(A, index + 1);
+            swap(A, start, index);
+        }
     }
 }
 ```
@@ -34,24 +50,36 @@ class Solution {
 
 ```c#
 public class Solution {
-    public bool ContainsPattern(int[] arr, int m, int k) {
-        int n = arr.Length;
-        int pattern = m * k;        
-        if (pattern > n) return false;
-        
-        for (int i = 0; i + pattern <= n; i++) {
-            bool ans = true;
-            for (int j = 1; j <= k - 1; j++) {
-                int window = j * m;
-                for (int a = i + window; a < i + window + m; a++) {
-                    if (arr[a] != arr[a - m]) {
-                        ans = false;
-                    }
-                }
+    private int ans;
+
+    public string LargestTimeFromDigits(int[] A) {
+        ans = -1;
+        Permute(A, 0);
+        if (ans < 0) return "";
+        return String.Format("{0:00}:{1:00}", ans / 60, ans % 60);
+    }
+
+    private void Swap(int[] A, int i, int j) {
+        int t = A[i];
+        A[i] = A[j];
+        A[j] = t;
+    }
+
+    private void Permute(int[] A, int index) {
+        if (index >= A.Length) {
+            int h = A[0] * 10 + A[1];
+            int m = A[2] * 10 + A[3];
+            int minutes = h * 60 + m;
+            if (h < 24 && m < 60) {
+                ans = Math.Max(ans, minutes);
             }
-            if (ans) return true;
+            return;
         }
-        return false;
+        for (int start = index; start < A.Length; start++) {
+            Swap(A, start, index);
+            Permute(A, index + 1);
+            Swap(A, start, index);
+        }
     }
 }
 ```
@@ -60,28 +88,39 @@ public class Solution {
 
 ```vb
 Class Solution 
-	Public Function ContainsPattern(arr As Integer(), m As Integer, k As Integer) As Boolean 
-		Dim n = arr.Length
-		Dim pattern = m * k
-		If pattern > n Then
-			Return False
-		End If 
-		For i = 0 To n - pattern
-			Dim ans = True
-			For j = 1 To k - 1
-				Dim window = j * m 
-				For a = i + window To i + window + m - 1
-					If arr(a) <> arr(a - m) Then
-						ans = False
-					End If
-				Next
-			Next
-			If ans Then
-				Return true
-			End If
-		Next
-		Return False
+	Private ans As Integer
+
+	Public Function LargestTimeFromDigits(A As Integer()) As String
+		ans = -1
+		Permute(A, 0)
+		If ans < 0 Then
+			Return ""
+		End If
+		Return String.Format("{0:00}:{1:00}", ans \ 60, ans Mod 60) ' \ is integer division
 	End Function
+
+	Private Sub Swap (A As Integer(), i As Integer, j As Integer)
+		Dim t = A(i)
+		A(i) = A(j)
+		A(j) = t
+	End Sub
+
+	Private Sub Permute(A As Integer(), index As Integer)
+		If index >= A.Length
+			Dim h = A(0) * 10 + A(1)
+			Dim m = A(2) * 10 + A(3)
+			Dim minutes = h * 60 + m
+
+			If h < 24 AndAlso m < 60 Then
+				ans = Math.Max(ans, minutes)
+			End If
+		End If
+		For start = index To A.Length - 1
+			Swap(A, start, index)
+			Permute(A, index + 1)
+			Swap(A, start, index)
+		Next
+	End Sub
 End Class
 ```
 
@@ -99,4 +138,4 @@ Compile with `csc Solution.cs` and run with `Solution.exe`.
 
 Compile with `vbc Solution.vb` and run with `Solution.exe`.
 
-[title]: https://leetcode.com/problems/detect-pattern-of-length-m-repeated-k-or-more-times/
+[title]: https://leetcode.com/problems/largest-time-for-given-digits/
