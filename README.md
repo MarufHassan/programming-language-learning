@@ -33,6 +33,7 @@ Java, C#, Visual Basic
 | [Find Right Interval][lc0436] | Binary Search | Java, C#, VB |
 | [Implement Rand10() Using Rand7()][lc0470] | Random | Java, C#, VB |
 | [Pancake Sorting][lc0969] | Array, Sort | Java, C#, VB |
+| [Contains Duplicate III][lc0220] | Sort, Ordered Map | Java, C#, VB |
 
 
 [lc0436]: /src/436-find-right-interval
@@ -41,6 +42,7 @@ Java, C#, Visual Basic
 [lc1566]: /src/1566-detect-pattern-of-length-m-repeated-k-or-more-times
 [lc0949]: /src/949-largest-time-for-given-digits
 [lc0459]: /src/459-repeated-substring-pattern
+[lc0220]: /src/220-contains-duplicate-iii
 
 [hr001]: /src/datatypes
 [hr002]: /src/end-of-file
