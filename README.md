@@ -24,6 +24,7 @@ Java, C#, Visual Basic
 | [End-of-file][hr002] | File | Java, C#, VB |
 | [Detect Pattern of Length M Repeated K or More Times][lc1566] | Array | Java, C#, VB |
 | [Largest Time for Given Digits][lc0949] | Math | Java, C#, VB |
+| [Repeated Substring Pattern][lc0459] | String | Java, C#, VB |
 
 ### Medium
 
@@ -39,6 +40,7 @@ Java, C#, Visual Basic
 [lc0969]: /src/969-pancake-sorting
 [lc1566]: /src/1566-detect-pattern-of-length-m-repeated-k-or-more-times
 [lc0949]: /src/949-largest-time-for-given-digits
+[lc0459]: /src/459-repeated-substring-pattern
 
 [hr001]: /src/datatypes
 [hr002]: /src/end-of-file
