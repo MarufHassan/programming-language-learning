@@ -35,6 +35,7 @@ Java, C#, Visual Basic
 | [Pancake Sorting][lc0969] | Array, Sort | Java, C#, VB |
 | [Contains Duplicate III][lc0220] | Sort, Ordered Map | Java, C#, VB |
 | [Word Pattern][lc0290] | Hash Table | Java, C#, VB |
+| [Compare Version Numbers][lc0165] | String | Java, C#, VB |
 
 
 [lc0436]: /src/436-find-right-interval
@@ -45,6 +46,7 @@ Java, C#, Visual Basic
 [lc0459]: /src/459-repeated-substring-pattern
 [lc0220]: /src/220-contains-duplicate-iii
 [lc0290]: /src/290-word-pattern
+[lc0165]: /src/165-compare-version-numbers
 
 [hr001]: /src/datatypes
 [hr002]: /src/end-of-file
