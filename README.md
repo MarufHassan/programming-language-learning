@@ -25,6 +25,7 @@ Java, C#, Visual Basic
 | [Detect Pattern of Length M Repeated K or More Times][lc1566] | Array | Java, C#, VB |
 | [Largest Time for Given Digits][lc0949] | Math | Java, C#, VB |
 | [Repeated Substring Pattern][lc0459] | String | Java, C#, VB |
+| [Bulls and Cows][lc0299] | Hash Table | Java, C#, VB |
 
 ### Medium
 
@@ -47,6 +48,7 @@ Java, C#, Visual Basic
 [lc0220]: /src/220-contains-duplicate-iii
 [lc0290]: /src/290-word-pattern
 [lc0165]: /src/165-compare-version-numbers
+[lc0299]: /src/299-bulls-and-cows
 
 [hr001]: /src/datatypes
 [hr002]: /src/end-of-file
