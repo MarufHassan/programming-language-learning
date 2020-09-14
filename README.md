@@ -38,6 +38,12 @@ Java, C#, Visual Basic
 | [Word Pattern][lc0290] | Hash Table | Java, C#, VB |
 | [Compare Version Numbers][lc0165] | String | Java, C#, VB |
 
+### Hard
+
+| Title                                    | Tag | Language                                      |
+| :--------------------------------------- | :-- |:--------------------------------------- |
+| [Insert Interval][lc0057] | Array, Sort | Java, C#, VB |
+
 
 [lc0436]: /src/436-find-right-interval
 [lc0470]: /src/470-implement-rand10-using-rand7
@@ -49,6 +55,7 @@ Java, C#, Visual Basic
 [lc0290]: /src/290-word-pattern
 [lc0165]: /src/165-compare-version-numbers
 [lc0299]: /src/299-bulls-and-cows
+[lc0057]: /src/57-insert-interval
 
 [hr001]: /src/datatypes
 [hr002]: /src/end-of-file
