@@ -37,6 +37,7 @@ Java, C#, Visual Basic
 | [Contains Duplicate III][lc0220] | Sort, Ordered Map | Java, C#, VB |
 | [Word Pattern][lc0290] | Hash Table | Java, C#, VB |
 | [Compare Version Numbers][lc0165] | String | Java, C#, VB |
+| [Sequential Digits][lc1291] | Backtracking | Java, C#, VB |
 
 ### Hard
 
@@ -56,6 +57,7 @@ Java, C#, Visual Basic
 [lc0165]: /src/165-compare-version-numbers
 [lc0299]: /src/299-bulls-and-cows
 [lc0057]: /src/57-insert-interval
+[lc1291]: /src/1291-sequential-digits
 
 [hr001]: /src/datatypes
 [hr002]: /src/end-of-file
