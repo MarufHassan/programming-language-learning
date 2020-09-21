@@ -44,6 +44,7 @@ Java, C#, Visual Basic
 | Title                                    | Tag | Language                                      |
 | :--------------------------------------- | :-- |:--------------------------------------- |
 | [Insert Interval][lc0057] | Array, Sort | Java, C#, VB |
+| [Unique Paths III][lc0980] | Backtracking, DFS | Java, C#, VB |
 
 
 [lc0436]: /src/436-find-right-interval
@@ -58,6 +59,7 @@ Java, C#, Visual Basic
 [lc0299]: /src/299-bulls-and-cows
 [lc0057]: /src/57-insert-interval
 [lc1291]: /src/1291-sequential-digits
+[lc1291]: /src/980-unique-paths-iii
 
 [hr001]: /src/datatypes
 [hr002]: /src/end-of-file
