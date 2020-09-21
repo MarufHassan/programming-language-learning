@@ -59,7 +59,7 @@ Java, C#, Visual Basic
 [lc0299]: /src/299-bulls-and-cows
 [lc0057]: /src/57-insert-interval
 [lc1291]: /src/1291-sequential-digits
-[lc1291]: /src/980-unique-paths-iii
+[lc0980]: /src/980-unique-paths-iii
 
 [hr001]: /src/datatypes
 [hr002]: /src/end-of-file
